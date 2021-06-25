@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+
+{% block content %}
+    <h1>{{ thing.name }} details!</h1>
+    <h2>Reviewer: {{ thing.reviewer }}</h2>
+    <h3>Rating: {{ thing.rating }}</h3>
+    <a href="{% url 'thing_update' thing.pk %}">Update thing</a>
+    <br>
+    <a href="{% url 'thing_delete' thing.pk %}">Delete thing</a>
+    <br>
+    <a href="{% url 'thing_list' %}">Back to list</a>
+{% endblock content %}
